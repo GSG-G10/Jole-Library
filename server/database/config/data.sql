@@ -1,23 +1,23 @@
 BEGIN;
 DROP TABLE IF EXISTS author , books ,img, book_author_img CASCADE;
-CREATE TABLE author (
+CREATE TABLE author(
     id SERIAL PRIMARY KEY ,
-    first_name VARCHAR(300) NOT NULL ,
+    first_name VARCHAR(300) NOT NULL,
     surname VARCHAR (300) NOT NULL
 );
-CREATE TABLE books (
+CREATE TABLE books(
     id SERIAL PRIMARY KEY ,
     book_name VARCHAR (300) NOT NULL 
 );
-CREATE TABLE img (
+CREATE TABLE img(
     id SERIAL PRIMARY KEY ,
-    img_url VARBINARY(1024) NOT NULL
+    img_url TEXT NOT NULL
 );
 
-CREATE TABLE book_author_img (
+CREATE TABLE book_author_img(
     book_id integer REFERENCES books(id) ON UPDATE CASCADE,
-    author_id integer REFERENCES author(id) ON UPDATE CASCADE;
-    img_id  integer REFERENCES img(id) ON UPDATE CASCADE;
+    author_id integer REFERENCES author(id) ON UPDATE CASCADE,
+    img_id  integer REFERENCES img(id) ON UPDATE CASCADE
 );
 INSERT INTO author(first_name , surname) VALUES
 ('Sidney','Morris' ),
@@ -71,7 +71,7 @@ INSERT INTO book_author_img(author_id ,book_id,img_id ) VALUES
 (7,6,8),
 (7,7,9),
 (8,9,11),
-(8,8,10)
+(8,8,10),
 (9,10,12),
 (10,11,13);
 
