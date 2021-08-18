@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    background-color: white;
+  }
+  .jole-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  .logo-img {
+    width: 200px;
+  }
+  .logo-img img {
+    width: 100%;
+  }
+  .nav-bar {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: 30px;
+  }
+  .nav-bar a {
+    width: 20%;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  .nav-bar a:hover {
+    border-bottom: 2px solid rgb(248, 187, 165);
+  }
+ #search-btn{
+    background: rgb(247, 185,162 ) ;
+    border-radius: 5px;
+    width: 90px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+#input{
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+
+ }
