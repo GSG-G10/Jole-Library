@@ -6,23 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Books</title>
     <link rel="stylesheet" href="../css/addbook.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap" rel="stylesheet">     <title>Jole Library</title>
+
 </head>
 <body>
-    <form action="/post-data" method="POST">
-        <label for="name">Book Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Add your book name" required><br>
+    <div class="form-page">
+        <header>
+            
+        </header>
+        <section class="form-section">
+            <h1>Add your Book</h1>
+            <form action="/post-data" method="POST">
+                <label for="name">Book Name:</label>
+                <input type="text" id="name" name="name" placeholder="Add your book name" required>
+                
+                <label for="first">Author First Name:</label>
+                <input type="text" id="first" name="first" placeholder="Add your first name" required>
         
-        <label for="first">Author First Name:</label><br>
-        <input type="text" id="first" name="first" placeholder="Add your first name" required><br>
+                <label for="surname">Author Surname :</label>
+                <input type="text" id="surname" name="surname" placeholder="Add your surname" required>
+        
+                <label for="url">Book Cover URL :</label>
+                <input type="text" id="url" name="url"  placeholder="Add your book'cover URL" required>
+        
+                <button type="submit">Submit</button>
+            </form> 
+        </section>
 
-        <label for="surname">Author Surname :</label><br>
-        <input type="text" id="surname" name="surname" placeholder="Add your surname" required><br>
+    </div>
 
-        <label for="url">Book Cover URL :</label><br>
-        <input type="text" id="url" name="url"  placeholder="Add your book'cover URL" required><br>
-
-        <button type="submit">Submit</button>
-    </form>
 
     <script src="../js/dom.js"></script>
 </body>

@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.form-page{
+    height: 100vh;
+}
+header{
+    height: 10%;
+}
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://c1.wallpaperflare.com/preview/608/164/965/library-books-education-knowledge.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: .7;
+}
+h1{
+    font-family: 'Indie Flower', cursive;
+    width: 30%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0;
+    background: rgb(23 23 23);
+    color: rgba(245, 226, 217,0.9);
+}
+form{
+    background: linear-gradient(to right bottom, rgba(245, 226, 217,0.9), rgba(247, 185,162 ,0.9));
+    width: 30%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0 10px 10px
+}
+label{
+    text-indent: -145px;
+    margin: 25px 0 6px;
+ 
+}
+input{
+    width: 80%;
+    height: 7vh;
+    border-radius: 10px;
+    text-indent: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+    border: 1px solid black;
+}
+button{
+    background: rgb(247, 185,162 );
+    width: 20%;
+    height: 6vh;
+    margin: 20px;
+    border-radius: 10px;
+    width: 180px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+    border: 1px solid black;
+    font-family: 'Indie Flower', cursive;
+}
