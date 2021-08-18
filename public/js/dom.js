@@ -1,28 +1,31 @@
-const searchButton = document.querySelector("#search-btn");
-const searchInput = document.querySelector(".input-bar");
-const divResult = document.querySelector(".result-container");
+const searchButton = document.querySelector('#search-btn');
+const searchInput = document.querySelector('.input-bar');
+const divResult = document.querySelector('.result-container');
 
-searchButton.addEventListener("click", fetchSearchedData);
+const createNode = (tag, className, parentNode) => {
+  const tagName = document.createElement(tag);
+  tagName.classList.add(className);
+  parentNode.appendChild(tagName);
+  return tagName;
+};
+
+const createBookCard = (imgUrl, nameOfBook, nameOfAuthor) => {
+  const bookCard = createNode('div', 'book-card', divResult);
+  const bookImg = createNode('img', 'book-img', bookCard);
+  bookImg.src = imgUrl;
+  const details = createNode('div', 'book-details', bookCard);
+  const bookName = createNode('h3', 'book-name', details);
+  bookName.textContent = nameOfBook;
+  const authorName = createNode('h4', 'author-name', details);
+  authorName.textContent = nameOfAuthor;
+};
+
 const showSearchedData = (result) => {
+  divResult.textContent = '';
   result.forEach((element) => {
-    const bookCard = document.createElement("div");
-    bookCard.classList.add("book-card");
-    divResult.appendChild(bookCard);
-    const bookImg = document.createElement("img");
-    bookImg.classList.add("book-img");
-    bookCard.appendChild(bookImg);
-    bookImg.src = element.url;
-    const details = document.createElement("div");
-    details.classList.add("book-details");
-    bookCard.appendChild(details);
-    const bookName = document.createElement("h3");
-    bookName.classList.add("book-name");
-    details.appendChild(bookName);
-    bookName.textContent = element.name;
-    const authorName = document.createElement("h4");
-    authorName.classList.add("author-name");
-    details.appendChild(authorName);
-    authorName.textContent = element.first + " " + element.surname ;
+    const author = `${element.first} ${element.surname}`;
+    createBookCard(element.url, element.name, author);
   });
 };
 
+searchButton.addEventListener('click', fetchSearchedData);
