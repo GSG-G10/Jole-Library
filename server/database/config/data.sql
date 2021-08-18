@@ -77,3 +77,6 @@ INSERT INTO book_author_img(author_id ,book_id,img_id ) VALUES
 
 
 COMMIT;
+
+
+
