@@ -1,12 +1,18 @@
 const express = require('express');
 const { join } = require('path');
-const { getSearchData, postData } = require('../database/queries');
+const { getSearchData, postData, getAllData } = require('../database/queries');
 
 const router = express.Router();
 
 router.get('/search/:input', (req, res) => {
   const { input } = req.params;
   getSearchData(input)
+    .then((result) => res.json(result.rows))
+    .catch((err) => res.status(500).sendFile(join(__dirname, '..', 'public', 'html', '500.html')));
+});
+
+router.get('/all-data', (req, res) => {
+  getAllData()
     .then((result) => res.json(result.rows))
     .catch((err) => res.status(500).sendFile(join(__dirname, '..', 'public', 'html', '500.html')));
 });
