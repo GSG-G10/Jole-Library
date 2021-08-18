@@ -10,6 +10,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, '..', 'public')));
 
 app.set('port', process.env.PORT || 2000);
+app.get('/search', (req,res) => {
+    res.sendFile(join(__dirname, '..', 'public', 'html', 'search.html'))
+}
+)
 app.use(router);
 
 module.exports = app;
