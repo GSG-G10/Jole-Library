@@ -1,4 +1,4 @@
 fetch('/all-data')
   .then((respond) => respond.json())
-  .then((result) => showAllData(result))
+  .then((result) => showSearchedData(result))
   .catch((err) => err);

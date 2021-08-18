@@ -27,11 +27,5 @@ const showSearchedData = (result) => {
     createBookCard(element.img_url, element.book_name, author);
   });
 };
-const showAllData = (result) => {
-  result.forEach((element) => {
-    const author = `${element.first_name} ${element.surname}`;
-    createBookCard(element.img_url, element.book_name, author);
-  });
-};
 
 searchButton.addEventListener('click', fetchSearchedData);
