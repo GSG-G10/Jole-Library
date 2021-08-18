@@ -23,8 +23,8 @@ const createBookCard = (imgUrl, nameOfBook, nameOfAuthor) => {
 const showSearchedData = (result) => {
   divResult.textContent = '';
   result.forEach((element) => {
-    const author = `${element.first} ${element.surname}`;
-    createBookCard(element.url, element.name, author);
+    const author = `${element.first_name} ${element.surname}`;
+    createBookCard(element.img_url, element.book_name, author);
   });
 };
 
