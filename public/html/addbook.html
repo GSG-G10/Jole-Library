@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Books</title>
+    <link rel="stylesheet" href="../css/addbook.css">
+</head>
+<body>
+    <form action="/post-data" method="POST">
+        <label for="name">Book Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Add your book name" required><br>
+        
+        <label for="first">Author First Name:</label><br>
+        <input type="text" id="first" name="first" placeholder="Add your first name" required><br>
+
+        <label for="surname">Author Surname :</label><br>
+        <input type="text" id="surname" name="surname" placeholder="Add your surname" required><br>
+
+        <label for="url">Book Cover URL :</label><br>
+        <input type="text" id="url" name="url"  placeholder="Add your book'cover URL" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="../js/fetch.js"></script>
+    <script src="../js/dom.js"></script>
+</body>
+</html>
