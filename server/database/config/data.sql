@@ -50,7 +50,7 @@ INSERT INTO img(img_url) VALUES
 ('https://www.deslegte.com/images/cached/resample/jpg/data/uploads/297/450/cms_visual_994654.jpg_1510324486000_297x450.jpg'),
 ('https://m.media-amazon.com/images/I/51VvhkvdeHL.jpg'),
 ('https://upload.wikimedia.org/wikipedia/en/2/20/DeathOfASalesman.jpg'),
-('https://www.bing.com/images/blob?bcid=RO2BNV6oGh0DaHMS7V5KL7i2y8J4.....zM'),
+('https://images-na.ssl-images-amazon.com/images/I/41cESgIqFfL._SX327_BO1,204,203,200_.jpg'),
 ('https://upload.wikimedia.org/wikipedia/en/c/c0/Murder_on_the_Orient_Express_First_Edition_Cover_1934.jpg'),
 ('https://upload.wikimedia.org/wikipedia/en/8/8c/Mysterious_affair_at_styles.jpg'),
 ('https://upload.wikimedia.org/wikipedia/en/b/bf/The_Murder_at_the_Vicarage_First_Edition_Cover_1930.jpg'),
@@ -60,20 +60,22 @@ INSERT INTO img(img_url) VALUES
 ('https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/4864/9780486404530.jpg')
 RETURNING ID;
 INSERT INTO book_author_img(author_id ,book_id,img_id ) VALUES
+(8,9,11),
+(8,8,10),
+(7,5,7),
+(9,10,12),
+(10,11,13),
+(7,6,8),
+(7,7,9),
 (1,1,1),
 (1,2,2),
-(2,2,2),
 (3,3,3),
 (4,3,4),
 (5,4,5),
 (6,4,6),
-(7,5,7),
-(7,6,8),
-(7,7,9),
-(8,9,11),
-(8,8,10),
-(9,10,12),
-(10,11,13);
+(2,2,2);
+
+
 
 
 COMMIT;
