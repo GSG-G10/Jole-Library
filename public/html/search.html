@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/search.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <title>Search for Book</title>
   </head>
   <body>
-    <div class="container">
-      <input
-        type="text"
-        placeholder="Put the Name of the book"
-        class="input-bar"
-        id="input"
-      />
-      <button class="btn" id="search-btn">Search</button>
-    </div>
-    <div>
-      <div class="result-container"></div>
+    <div class="home-page">
+      <header class="jole-header">
+        <section class="logo-img">
+          <img src="../image/jole.png" alt="Jole Library Image" />
+        </section>
+        <nav class="nav-bar">
+          <a href="../public/index.html"><li>Home</li></a>
+          <a href="../public/html/search.html"><li>Search</li></a>
+          <a href="../public/html/addbook.html"><li>Add</li></a>
+        </nav>
+      </header>
+      <div class="container">
+        <input
+          type="text"
+          placeholder="Put the Name of the book"
+          class="input-bar"
+          id="input"
+        />
+        <button class="btn" id="search-btn">Search</button>
+      </div>
+      <div>
+        <div class="result-container"></div>
+      </div>
     </div>
     <script src="../js/fetchAll.js"></script>
     <script src="../js/fetchSearched.js"></script>
