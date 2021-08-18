@@ -2,94 +2,160 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Indie Flower', cursive;
 }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-page {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  height: 80vh;
-  background-color: white;
+  height: 90%;
+  border-radius: 50px;
+  width: 95%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(245, 226, 217, 0.9),
+    rgba(247, 185, 162, 0.9)
+  );
+  backdrop-filter: blur(0.3rem);
+  box-shadow: 12px 26px 44px rgba(248, 200, 182, 0.575);
 }
-.jole-header {
+header {
   display: flex;
   width: 100%;
-  justify-content: space-around;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  margin: 35px 0 0 0;
+  font-family: "Indie Flower", cursive;
 }
-.logo-img {
-  width: 200px;
+header div{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .7rem;
 }
-.logo-img img {
-  width: 100%;
+
+header img{
+  width: 150px;
+  height: 150px;
+  margin-left: -20px;
+}
+header h1{
+  margin: 0 0 0 -30px;
 }
 .nav-bar {
   width: 40%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
   font-size: 30px;
 }
 .nav-bar a {
-  width: 20%;
   text-decoration: none;
   color: black;
   font-weight: 600;
   letter-spacing: 3px;
+  font-size: 1rem;
 }
 .nav-bar a:hover {
   border-bottom: 2px solid rgb(248, 187, 165);
 }
-.show-img-container img {
-  width: 100px;
-  height: 160px;
-}
 .show-img-container {
- margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .home-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
-  background: #f8bba5;
-  min-height: 70vh;
+ height: 95vh;
+  width: 95%;
+  margin-top: -80px;
+}
+.home-welcom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  
+}
+.show-img-container {
+  position: relative;
   width: 50%;
-  background: linear-gradient(to right bottom, rgba(245, 226, 217,0.9), rgba(247, 185,162 ,0.9));
+  height: 20vh;
+  margin-left: 30px;
+}
+.show-img-container img:first-child {
+  width: 20%;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+.show-img-container img:nth-child(2) {
+  width: 23%;
+  height: 235px;
+  position: absolute;
+  left: 90px;
+  top: -18px;
+  border-radius: 10px;
+}
+.show-img-container img:nth-child(3) {
+  width: 30%;
+  height: 272px;
+  position: absolute;
+  top: -40px;
+  left: 206px;
+  border-radius: 10px;
+  z-index: 3;
+}
+.show-img-container img:nth-child(4) {
+  width: 23%;
+  height: 235px;
+  position: absolute;
+  border-radius: 10px;
+  right: 100px;
+  top: -18px;
   z-index: 2;
-  backdrop-filter: blur(0.3rem);
-  box-shadow: 12px 26px 44px rgba(248, 200, 182, 0.575);
 }
-
-.home-welcom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    
+.show-img-container img:last-child {
+  width: 20%;
+  height: 200px;
+  position: absolute;
+  border: 10px;
+  right: 0;
+  border-radius: 10px;
 }
-.home-welcom button{
-    background: rgb(247, 185,162 ) ;
-    border-radius: 5px;
-    width: 180px;
-    height: 50px;
-    border-style: none;
-    margin-right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-
-}.btns{
-    display: flex;
-    flex-direction: row;
-    
+.home-welcom {
+  width: 40%;
 }
-.text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+.home-welcom button {
+  background: rgb(247, 185, 162);
+  border-radius: 5px;
+  width: 180px;
+  height: 50px;
+  border-style: none;
+  margin-right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Indie Flower", cursive;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20vh;
+  align-items: center;
+  margin-bottom: 30px;
 }
