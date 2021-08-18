@@ -10,6 +10,7 @@ router.get('/search/:input', (req, res) => {
     .then((result) => res.json(result.rows))
     .catch((err) => res.status(500).sendFile(join(__dirname, '..', 'public', 'html', '500.html')));
 });
+
 router.post('/post-data', (req, res) => {
   const {
     name, first, surname, url,
