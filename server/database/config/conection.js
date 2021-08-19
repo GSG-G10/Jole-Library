@@ -3,12 +3,12 @@ const { Pool } = require('pg');
 
 let dbUrl = '';
 const {
-  NODE_ENV, DB_DEV_URL, DB_URL, TEST_DB_URL,
+  NODE_ENV, DB_DEV_URL, DATABASE_URL, TEST_DB_URL,
 } = process.env;
 
 switch (NODE_ENV) {
   case 'production':
-    dbUrl = DB_URL;
+    dbUrl = DATABASE_URL;
     break;
   case 'development':
     dbUrl = DB_DEV_URL;
@@ -22,8 +22,7 @@ switch (NODE_ENV) {
 
 const options = {
   connectionString: dbUrl,
-  connectionString: process.env.DB_DEV_URL,
-  ssl: true,
+  ssl: false,
 };
 
 module.exports = new Pool(options);

@@ -83,23 +83,18 @@
   justify-content: center;
   border-radius: 0;
  }
-
- /* const bookCard = createNode('div', 'book-card', divResult);
-  const bookImg = createNode('img', 'book-img', bookCard);
-  const details = createNode('div', 'book-details', bookCard);
-  const bookName = createNode('h3', 'book-name', details);
-  const authorName = createNode('h4', 'author-name', details); */
-
-
   .result-container{
     padding: 0 15px;
     margin: 0 auto 30px;
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background: rgba(247, 234, 228, 0.9);
     border-radius: 0 0 10px 10px ;
+  }
+  .result-section{
+    width: 95%;
   }
   .book-card{
     width: 25%;
