@@ -21,8 +21,8 @@ switch (NODE_ENV) {
 }
 
 const options = {
-  connectionString: dbUrl,
-  ssl: false,
+  connectionString: DB_DEV_URL,
+  ssl: { rejectUnauthorized: false },
 };
 
 module.exports = new Pool(options);
